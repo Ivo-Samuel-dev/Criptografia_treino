@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
         var input_email = document.getElementById("email");
         var input_senha = document.getElementById("senha");
 
-        // Validação
+        // Validação das informações - valor vazio
         if (!senha_inicial || !email) {
             if(!senha_inicial && !email){
             input_senha.placeholder = "Digite a Senha!";
@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
 
+        // Separação dos caracteres da senha
         const variaveis = {};
         const caracteres = senha_inicial.split('');
         caracteres.forEach((char, index) => {
